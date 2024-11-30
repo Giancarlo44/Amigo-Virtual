@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "149952347931",
+    "project_id": "amigo-virtualai-app",
+    "storage_bucket": "amigo-virtualai-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149952347931:android:3755679a07e126e8219dbe",
+        "android_client_info": {
+          "package_name": "com.example.amigovirtual"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZJNGx1AzXN6YPhk1Tm93PcYprY8QPvhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

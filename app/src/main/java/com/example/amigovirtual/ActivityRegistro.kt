@@ -2,7 +2,6 @@ package com.example.amigovirtual
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -57,8 +56,10 @@ class ActivityRegistro : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    println("Usuario registrado en Firebase")
                     saveUserInfo()
                 } else {
+                    println("Error al registrar usuario: ${task.exception?.message}")
                     Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                 }
             }
@@ -76,17 +77,23 @@ class ActivityRegistro : AppCompatActivity() {
 
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         val user = User(username, age, gender)
+
         if (userId != null) {
             FirebaseDatabase.getInstance().getReference("users").child(userId)
                 .setValue(user)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        startActivity(Intent(this, ActivityCreacionAmiko::class.java))
+                        println("Navegando a ActivityLogin")
+                        startActivity(Intent(this, ActivityLogin::class.java))
                         finish()
                     } else {
+                        println("Error al guardar información: ${task.exception?.message}")
                         Toast.makeText(this, "Error al guardar información", Toast.LENGTH_SHORT).show()
                     }
                 }
+        } else {
+            println("Usuario no autenticado")
+            Toast.makeText(this, "Error: Usuario no autenticado", Toast.LENGTH_SHORT).show()
         }
     }
 

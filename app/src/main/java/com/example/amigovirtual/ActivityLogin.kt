@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -18,12 +19,15 @@ class ActivityLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        emailInput = findViewById(R.id.email_input)
-        passwordInput = findViewById(R.id.password_input)
-        loginButton = findViewById(R.id.login_button)
-        auth = FirebaseAuth.getInstance()
+        // Encuentra el TextView por su ID
+        val registerNowTextView = findViewById<TextView>(R.id.register_text)
 
-        loginButton.setOnClickListener { login() }
+        // Configura el listener de clics
+        registerNowTextView.setOnClickListener {
+            // Lógica para navegar a la actividad de registro
+            val intent = Intent(this, ActivityRegistro::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun login() {

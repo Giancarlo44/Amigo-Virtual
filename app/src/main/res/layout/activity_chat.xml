@@ -54,6 +54,18 @@
         android:layout_above="@id/message_input_layout"
         android:padding="8dp" />
 
+    <!-- Campo para mostrar la respuesta de ChatGPT -->
+    <TextView
+        android:id="@+id/response_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/message_input_layout"
+        android:padding="8dp"
+        android:text="Esperando respuesta..."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
     <!-- Campo de entrada y botón de envío -->
     <LinearLayout
         android:id="@+id/message_input_layout"

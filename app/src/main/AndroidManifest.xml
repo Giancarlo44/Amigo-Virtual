@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,7 @@
 
         <!-- Pantalla inicial: CargaActivity -->
         <activity
-            android:name=".CargaActivity"
+            android:name=".ActivityCarga"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,14 +25,14 @@
         </activity>
 
         <!-- Pantalla de Login -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
+        <activity android:name=".ActivityLogin" />
 
         <!-- Pantalla de Registro -->
         <activity
-            android:name=".RegistroActivity"
+            android:name=".ActivityRegistro"
             android:exported="true" />
+
+        <activity android:name=".ActivityChat" />
     </application>
 
 </manifest>
