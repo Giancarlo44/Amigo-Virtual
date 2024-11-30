@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="16dp">
+
+        <!-- Botón de navegación -->
+        <ImageView
+            android:id="@+id/navigateBefore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/navigate_before"
+            android:contentDescription="@string/navigate_before"
+            android:background="@drawable/circle_background"
+            android:layout_gravity="start"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Creación de AMIKO"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Campos de texto -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="¿Cómo te gustaría llamarme?"
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="¿Cómo te gustaría que sea? Serio, amigable, etc."
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Describe el cómo me ves."
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="¿Cómo prefieres que me dirija a ti?"
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="¿Qué género tengo?"
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="¿Qué cosas te interesan?"
+            android:background="@drawable/rounded_input"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botón continuar -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Continuar"
+            android:textColor="#FFF"
+            android:background="@drawable/rounded_button"
+            android:textSize="16sp" />
+
+        <!-- Nota -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(*) Puedes dejarlo en blanco y se usarán datos predeterminados."
+            android:textColor="#8CA3B0"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+    </LinearLayout>
+</ScrollView>

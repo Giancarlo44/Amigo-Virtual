@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Imagen de avatar -->
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/avatar01"
+        android:layout_marginTop="187dp"
+        android:layout_marginStart="31dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Nombre de usuario -->
+    <TextView
+        android:id="@+id/karen_ramirez"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Karen Ramírez"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_marginTop="551dp"
+        android:layout_marginStart="130dp" />
+
+    <!-- Botón de retroceso -->
+    <ImageView
+        android:id="@+id/navigate_before"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/navigate_before"
+        android:layout_marginTop="77dp"
+        android:layout_marginStart="31dp" />
+
+    <!-- Título de la información -->
+    <TextView
+        android:id="@+id/info_amiko"
+        android:layout_width="213dp"
+        android:layout_height="28dp"
+        android:text="Info. de AMIKO"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginTop="83dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Flechas izquierda y derecha -->
+    <ImageView
+        android:id="@+id/arrow_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/arrow_left"
+        android:layout_marginTop="362dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/arrow_right"
+        android:layout_marginTop="362dp"
+        android:layout_marginStart="330dp" />
+
+    <!-- Botón Editar -->
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/edit"
+        android:layout_marginTop="545dp"
+        android:layout_marginStart="296dp" />
+
+    <!-- Mensajes destacados -->
+    <TextView
+        android:id="@+id/mensajes_destacados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mensajes destacados"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:layout_marginTop="671dp"
+        android:layout_marginStart="94dp" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/star"
+        android:layout_marginTop="669dp"
+        android:layout_marginStart="52dp" />
+
+    <ImageView
+        android:id="@+id/navigate_next"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/navigate_next"
+        android:layout_marginTop="669dp"
+        android:layout_marginStart="343dp" />
+
+    <!-- Editar información -->
+    <TextView
+        android:id="@+id/editar_info_amiko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar información de AMIKO"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:layout_marginTop="721dp"
+        android:layout_marginStart="94dp" />
+
+    <ImageView
+        android:id="@+id/navigate_next2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/navigate_next"
+        android:layout_marginTop="719dp"
+        android:layout_marginStart="343dp" />
+
+    <!-- Historial por días -->
+    <TextView
+        android:id="@+id/historial_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historial por días de chat"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:layout_marginTop="768dp"
+        android:layout_marginStart="94dp" />
+
+    <ImageView
+        android:id="@+id/navigate_next3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/navigate_next"
+        android:layout_marginTop="766dp"
+        android:layout_marginStart="343dp" />
+
+    <!-- Iconos adicionales -->
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/edit"
+        android:layout_marginTop="719dp"
+        android:layout_marginStart="53dp" />
+
+    <ImageView
+        android:id="@+id/today"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/today"
+        android:layout_marginTop="766dp"
+        android:layout_marginStart="53dp" />
+
+</RelativeLayout>
