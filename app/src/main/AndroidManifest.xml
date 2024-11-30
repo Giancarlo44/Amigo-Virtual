@@ -28,11 +28,11 @@
         <activity android:name=".ActivityLogin" />
 
         <!-- Pantalla de Registro -->
-        <activity
-            android:name=".ActivityRegistro"
-            android:exported="true" />
+        <activity android:name=".ActivityRegistro" />
 
         <activity android:name=".ActivityChat" />
+
+        <activity android:name=".ActivityCreacionAmiko" />
     </application>
 
 </manifest>

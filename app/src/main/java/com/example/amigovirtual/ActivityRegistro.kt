@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -19,6 +20,7 @@ class ActivityRegistro : AppCompatActivity() {
     private lateinit var inputGender: EditText
     private lateinit var buttonContinue: Button
     private lateinit var auth: FirebaseAuth
+    private lateinit var backButton: ImageView  // Flecha de regresar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +36,16 @@ class ActivityRegistro : AppCompatActivity() {
         buttonContinue = findViewById(R.id.button_continue)
         auth = FirebaseAuth.getInstance()
 
+        // Asignar listener al botón de continuar
         buttonContinue.setOnClickListener { registerUser() }
+
+        // Asignar listener al botón de regresar
+        backButton = findViewById(R.id.navigate_before)
+        backButton.setOnClickListener {
+            // Navegar al Login cuando se hace clic en la flecha
+            startActivity(Intent(this, ActivityLogin::class.java))
+            finish()  // Finaliza esta actividad para que no se quede en el historial
+        }
     }
 
     private fun registerUser() {
@@ -53,13 +64,12 @@ class ActivityRegistro : AppCompatActivity() {
             return
         }
 
+        // Crear usuario en Firebase Authentication
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    println("Usuario registrado en Firebase")
                     saveUserInfo()
                 } else {
-                    println("Error al registrar usuario: ${task.exception?.message}")
                     Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                 }
             }
@@ -83,19 +93,17 @@ class ActivityRegistro : AppCompatActivity() {
                 .setValue(user)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        println("Navegando a ActivityLogin")
                         startActivity(Intent(this, ActivityLogin::class.java))
-                        finish()
+                        finish()  // Finaliza la actividad de registro
                     } else {
-                        println("Error al guardar información: ${task.exception?.message}")
                         Toast.makeText(this, "Error al guardar información", Toast.LENGTH_SHORT).show()
                     }
                 }
         } else {
-            println("Usuario no autenticado")
             Toast.makeText(this, "Error: Usuario no autenticado", Toast.LENGTH_SHORT).show()
         }
     }
 
     data class User(val username: String, val age: String, val gender: String)
 }
+
