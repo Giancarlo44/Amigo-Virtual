@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Imagen decorativa -->
+    <ImageView
+        android:id="@+id/tienda_imagen"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="149dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icono" />
+
+    <!-- Título "Iniciar Sesión" -->
+    <TextView
+        android:id="@+id/iniciar_sesion_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_centerHorizontal="true"
+        android:text="Iniciar sesión"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Campo de entrada para correo -->
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="488dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/input_background"
+        android:hint="Escribe tu correo electrónico"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#79747e"
+        android:textSize="14sp" />
+
+    <!-- Campo de entrada para contraseña -->
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/email_input"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/input_background"
+        android:hint="Ingresa tu contraseña"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#79747e"
+        android:textSize="14sp"
+        android:inputType="textPassword" />
+
+    <!-- Botón "Iniciar Sesión" -->
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="350dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/password_input"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#826f8c"
+        android:text="Iniciar sesión"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Enlace "¿Olvidaste la contraseña?" -->
+    <TextView
+        android:id="@+id/forgot_password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="¿Olvidaste la contraseña?"
+        android:textColor="#8CA3B0"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Enlace "Regístrate ahora en AMIKO" -->
+    <TextView
+        android:id="@+id/register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_password_text"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Regístrate ahora en AMIKO"
+        android:textColor="#8CA3B0"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium" />
+</RelativeLayout>
