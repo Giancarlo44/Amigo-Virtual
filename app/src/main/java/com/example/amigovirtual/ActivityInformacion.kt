@@ -17,11 +17,11 @@ class ActivityInformacion : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacion)
 
-        userName = findViewById(R.id.username_text)
-        userAge = findViewById(R.id.age_text)
-        userGender = findViewById(R.id.gender_text)
-        amikoName = findViewById(R.id.amiko_name_text)
-        amikoPersonality = findViewById(R.id.amiko_personality_text)
+        userName = findViewById(R.id.input_username)
+        userAge = findViewById(R.id.input_age)
+        userGender = findViewById(R.id.input_gender)
+        amikoName = findViewById(R.id.karen_ramirez)
+        amikoPersonality = findViewById(R.id.editPersonality)
 
         loadUserInfo()
         loadAmikoInfo()

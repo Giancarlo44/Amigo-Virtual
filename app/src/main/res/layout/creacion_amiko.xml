@@ -34,6 +34,7 @@
 
         <!-- Campos de texto -->
         <EditText
+            android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="¿Cómo te gustaría llamarme?"
@@ -42,6 +43,7 @@
             android:layout_marginBottom="16dp" />
 
         <EditText
+            android:id="@+id/editPersonality"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="¿Cómo te gustaría que sea? Serio, amigable, etc."
@@ -50,6 +52,7 @@
             android:layout_marginBottom="16dp" />
 
         <EditText
+            android:id="@+id/editDescription"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Describe el cómo me ves."
@@ -58,6 +61,7 @@
             android:layout_marginBottom="16dp" />
 
         <EditText
+            android:id="@+id/editSalutation"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="¿Cómo prefieres que me dirija a ti?"
@@ -66,6 +70,7 @@
             android:layout_marginBottom="16dp" />
 
         <EditText
+            android:id="@+id/editGender"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="¿Qué género tengo?"
@@ -74,6 +79,7 @@
             android:layout_marginBottom="16dp" />
 
         <EditText
+            android:id="@+id/editInterests"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="¿Qué cosas te interesan?"
@@ -83,6 +89,7 @@
 
         <!-- Botón continuar -->
         <Button
+            android:id="@+id/buttonContinue"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:text="Continuar"

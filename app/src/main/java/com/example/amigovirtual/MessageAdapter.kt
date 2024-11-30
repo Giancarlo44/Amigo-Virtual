@@ -3,6 +3,7 @@ package com.example.amigovirtual
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.amigovirtual.retrofit.ChatRequest
 import kotlinx.android.synthetic.main.item_message_bot.view.*
 import kotlinx.android.synthetic.main.item_message_user.view.*
 

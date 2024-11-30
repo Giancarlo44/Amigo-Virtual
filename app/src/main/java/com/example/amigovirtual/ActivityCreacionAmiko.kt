@@ -20,14 +20,14 @@ class ActivityCreacionAmiko : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_creacion_amiko)
+        setContentView(R.layout.creacion_amiko)
 
-        inputName = findViewById(R.id.name_input)
-        inputPersonality = findViewById(R.id.personality_input)
-        inputDescription = findViewById(R.id.description_input)
-        inputSalutation = findViewById(R.id.salutation_input)
-        inputGender = findViewById(R.id.gender_input)
-        inputInterests = findViewById(R.id.interests_input)
+        inputName = findViewById(R.id.editName)
+        inputPersonality = findViewById(R.id.editPersonality)
+        inputDescription = findViewById(R.id.editDescription)
+        inputSalutation = findViewById(R.id.editSalutation)
+        inputGender = findViewById(R.id.editGender)
+        inputInterests = findViewById(R.id.editInterests)
         buttonContinue = findViewById(R.id.button_continue)
 
         buttonContinue.setOnClickListener { saveAmikoSettings() }
